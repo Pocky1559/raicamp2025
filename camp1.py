@@ -22,4 +22,20 @@ graph = {
   'F': []
 }
 
-print(graph)
+start = 'A'
+goal = 'E'
+frontier = [start]
+explored = set() # Use a set for unique values (ignores duplicates)
+
+print(frontier, explored)
+
+while len(frontier) > 0 :
+  current = frontier.pop() # Remove and  put into variable
+  print(f"Current: {current}")
+
+  if current == goal :
+    print("Goal reached!")
+    break
+
+  for neighbor in graph[current] :
+    frontier.append(neighbor)
