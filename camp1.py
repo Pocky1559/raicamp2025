@@ -21,3 +21,5 @@ graph = {
   'E': [],
   'F': []
 }
+
+print(graph)
